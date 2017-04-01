@@ -1,0 +1,308 @@
+/*variables for sass file*/
+/*sets no margin and padding for overall page*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Verdana, Helvetica;
+  font-size: 15px;
+  color: #818181; }
+
+/*style for logo colour*/
+#logoamazing {
+  color: #28bdb3; }
+
+/*navbar styling*/
+#navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent; }
+
+/*Logo styling*/
+#logo {
+  font-size: 50px;
+  font-family: Arial, Verdana, Helvetica;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #818181; }
+
+/*Styling for gridlayout*/
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center; }
+
+.wrapper:after {
+  content: '';
+  display: table;
+  clear: both; }
+
+.column {
+  float: left;
+  box-sizing: border-box;
+  margin: 4px; }
+
+/* For Desktop*/
+.large-1 {
+  width: 8.666%; }
+
+.large-2 {
+  width: 16.666%; }
+
+.large-3 {
+  width: 25%; }
+
+.large-4 {
+  width: 33.5%; }
+
+.large-5 {
+  width: 41.666%; }
+
+.large-6 {
+  width: 50%; }
+
+.large-7 {
+  width: 58.333%; }
+
+.large-8 {
+  width: 63.5%; }
+
+.large-9 {
+  width: 75%; }
+
+.large-10 {
+  width: 83.333%; }
+
+.large-11 {
+  width: 91.666%; }
+
+.large-12 {
+  width: 95%; }
+
+/*end of grid layout styling*/
+/*styling for the three links at top of the page*/
+ul {
+  list-style-type: none;
+  overflow: hidden;
+  padding: 0;
+  margin-top: 5px; }
+
+li {
+  margin-right: 10px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none; }
+
+/*heading one styling*/
+h1 {
+  margin: 0;
+  padding: 0; }
+
+/*show which option is selected*/
+#selected {
+  color: #28bdb3;
+  font-weight: bold; }
+
+@media screen and (min-width: 706px) {
+  /*arrow on selected option*/
+  #arrow-down {
+    margin-top: 50px;
+    margin-left: 510px;
+    padding-left: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #28bdb3; } }
+table {
+  font-family: Arial, Verdana, Helvetica;
+  border-collapse: collapse;
+  margin-top: 20px; }
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px; }
+
+table {
+  padding-bottom: 20px; }
+
+th {
+  background-color: #dddddd; }
+
+.cardmethods {
+  margin-right: 10px;
+  margin-top: 30px; }
+
+.inputfields {
+  padding: 10px;
+  border-width: 2px;
+  border-radius: 5px;
+  box-shadow: none;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px; }
+
+.textbox {
+  width: 200px; }
+
+.paymentaddress {
+  margin-bottom: 20px; }
+
+#backtocart {
+  margin-top: 30px;
+  color: #28bdb3;
+  font-weight: bold;
+  float: right; }
+
+#paymentform {
+  width: 600px; }
+
+.radiobuttons {
+  margin-right: 10px;
+  margin-top: 10px; }
+
+.formbuttons {
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+  font-family: Arial, Verdana, Helvetica;
+  background-color: transparent;
+  width: 100px;
+  border: #28bdb3 solid 2px;
+  margin-top: 5px;
+  padding: 10px;
+  box-shadow: none;
+  border-radius: 5px;
+  color: #28bdb3; }
+
+.formbuttons:hover {
+  background-color: #28bdb3;
+  color: white; }
+
+.price {
+  float: right; }
+
+td > span:nth-child(1) {
+  color: black; }
+
+#requiredfieldtext {
+  font-size: 15px;
+  float: right;
+  font-family: Arial, Verdana, Helvetica; }
+
+#creditcardform {
+  margin-top: 70px; }
+
+#addressbutton {
+  background-color: #28bdb3;
+  box-shadow: none;
+  border: none;
+  border-radius: 5px; }
+
+#dropdown {
+  border: 0;
+  border-radius: 5px;
+  box-shadow: none;
+  width: 230px;
+  height: 30px;
+  margin-bottom: 10px;
+  font-size: 10px;
+  background-color: #28bdb3; }
+
+.cursorhand {
+  cursor: pointer; }
+
+#creditcardform {
+  display: none; }
+
+#appendEnterAddress {
+  display: none; }
+
+#findpostcode {
+  display: none; }
+
+#paypalform {
+  display: none; }
+
+#alipayform {
+  display: none; }
+
+#appendFindAddress {
+  display: none; }
+
+#enteraddressmanually {
+  display: none; }
+
+#creditcardtypes {
+  margin-bottom: 10px;
+  float: right; }
+
+.paymentbuttons {
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+  font-family: Arial, Verdana, Helvetica;
+  background-color: #818181;
+  width: 100px;
+  border: #818181 solid 2px;
+  margin-top: 10px;
+  padding: 10px;
+  box-shadow: none;
+  border-radius: 5px;
+  color: white; }
+
+.paymentbuttons:hover {
+  background-color: #28bdb3;
+  color: white;
+  border-color: #28bdb3; }
+
+@media screen and (max-width: 705px) {
+  [class*="large-"] {
+    width: 100%; }
+
+  #requiredfieldtext {
+    float: left; }
+
+  #creditcardtypes {
+    float: left; }
+
+  li {
+    display: block; }
+
+  #navbar {
+    background-color: black; }
+
+  #logo {
+    color: #d2d2d2; }
+
+  .small-hidden {
+    display: none; }
+
+  .paymentbuttons {
+    background-color: black;
+    border-color: black; }
+
+  #backtocart {
+    margin-top: 10px; } }
+@media screen and (max-width: 915px) {
+  .large-5 {
+    width: 100%; } }
+@media screen and (max-width: 925px) {
+  #arrow-down {
+    margin-left: 490px; } }
+@media screen and (max-width: 881px) {
+  #arrow-down {
+    margin-left: 460px; } }
+@media screen and (max-width: 825px) {
+  #arrow-down {
+    margin-left: 440px; } }
+@media screen and (max-width: 770px) {
+  #arrow-down {
+    margin-left: 415px; } }
+@media screen and (max-width: 741px) {
+  #arrow-down {
+    margin-left: 400px; } }
+#deliveryaddress {
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
