@@ -104,6 +104,28 @@ h1 {
   color: #28bdb3;
   font-weight: bold; }
 
+#submitorder {
+  float: right;
+  background-color: #e7b522;
+  color: white;
+  border: #e7b522 solid 2px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 15px;
+  font-family: Arial, Verdana, Helvetica;
+  width: 100px;
+  margin-top: 5px;
+  margin-right: 15px;
+  margin-bottom: 50px;
+  padding: 10px;
+  box-shadow: none;
+  border-radius: 5px; }
+
+#submitorder:hover {
+  background-color: #28bdb3;
+  color: white;
+  border-color: #28bdb3; }
+
 @media screen and (min-width: 706px) {
   /*arrow on selected option*/
   #arrow-down {
@@ -119,15 +141,16 @@ table {
   margin-top: 20px; }
 
 td, th {
-  border: 1px solid #dddddd;
+  border: 3px solid #28bdb3;
   text-align: left;
-  padding: 8px; }
+  padding: 20px; }
 
 table {
   padding-bottom: 20px; }
 
 th {
-  background-color: #dddddd; }
+  background-color: #28bdb3;
+  color: white; }
 
 .cardmethods {
   margin-right: 10px;
@@ -193,13 +216,7 @@ td > span:nth-child(1) {
 #creditcardform {
   margin-top: 70px; }
 
-#addressbutton {
-  background-color: #28bdb3;
-  box-shadow: none;
-  border: none;
-  border-radius: 5px; }
-
-#dropdown {
+.dropdown {
   border: 0;
   border-radius: 5px;
   box-shadow: none;
@@ -246,6 +263,7 @@ td > span:nth-child(1) {
   width: 100px;
   border: #818181 solid 2px;
   margin-top: 10px;
+  margin-bottom: 50px;
   padding: 10px;
   box-shadow: none;
   border-radius: 5px;
@@ -283,7 +301,17 @@ td > span:nth-child(1) {
     border-color: black; }
 
   #backtocart {
-    margin-top: 10px; } }
+    margin-top: 10px; }
+
+  #submitorder {
+    float: none; }
+
+  th {
+    background-color: #aaaaaa;
+    border-color: #aaaaaa; }
+
+  td, th {
+    border-color: #aaaaaa; } }
 @media screen and (max-width: 915px) {
   .large-5 {
     width: 100%; } }
@@ -304,5 +332,37 @@ td > span:nth-child(1) {
     margin-left: 400px; } }
 #deliveryaddress {
   text-align: center; }
+
+.alternativepayment {
+  font-size: 15px;
+  text-align: center;
+  border: 2px solid #e7b522;
+  color: #e7b522;
+  font-weight: bold; }
+
+#footertext {
+  font-size: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: white;
+  background-color: black; }
+
+#footertext > .wrapper > a {
+  color: white; }
+
+#footertext > .wrapper > a:hover {
+  color: #dddddd;
+  cursor: pointer; }
+
+footer > .wrapper > a > img {
+  padding: 7px 10px 2px 13px; }
+
+#ordertotal {
+  font-size: 20px;
+  color: black; }
+
+#saved {
+  display: none;
+  margin: 5px; }
 
 /*# sourceMappingURL=style.css.map */
