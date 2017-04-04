@@ -5,6 +5,7 @@ $primary-color: #28bdb3;
 $primary-font: Arial, Verdana, Helvetica;
 $primary-fontsize: 15px;
 $primary-fontcolour: #818181;
+$submitordercolour: #e7b522;
 
 /*sets no margin and padding for overall page*/
 body {
@@ -38,23 +39,25 @@ body {
   }
   color: $primary-fontcolour;
 }
-/*Styling for gridlayout*/
+/*wrap content up in a wrapper to keep them inline*/
 .wrapper{
   max-width: 960px;
   margin: 0 auto;
   text-align: center;
 }
+/*what to do after for content that has the wrapper class*/
 .wrapper:after {
   content: '';
   display: table;
   clear: both;
 }
+/*each individual column in the wrapper keeping the content left and using padding to space them out*/
 .column {
   float: left;
   box-sizing: border-box;
   margin: 4px;
 }
-/* For Desktop*/
+/*Grid layout For Desktop*/
 .large-1 {
   width: 8.666%;
 }
@@ -91,9 +94,9 @@ body {
 .large-12 {
   width: 95%;
 }
-/*end of grid layout styling*/
+/*end of grid layout for desktop*/
 
-/*styling for the three links at top of the page*/
+/*styling the stage list*/
 ul {
   list-style-type: none;
   overflow: hidden;
@@ -102,26 +105,33 @@ ul {
 
 }
 li {
-  margin-right: 10px;
+  margin: {
+    right: 10px;
+  }
   display: inline-block;
   text-align: center;
   text-decoration: none;
 }
-/*heading one styling*/
+
+/*set 0 margin and padding for the h1 tag*/
 h1 {
   margin: 0;
   padding: 0;
 }
-/*show which option is selected*/
+/*show which option is selected for the list in the order stage*/
 #selected {
   color: $primary-color;
-  font-weight: bold;
+  font: {
+    weight: bold;
+  }
 }
+
+//styling for the submit button
 #submitorder {
   float: right;
-  background-color: #e7b522;
+  background-color: $submitordercolour;
   color: white;
-  border: #e7b522 solid 2px;
+  border: $submitordercolour solid 2px;
   font-weight: bold;
   text-align: center;
   font-size: $primary-fontsize;
@@ -134,14 +144,18 @@ h1 {
   }
   padding: 10px;
   box-shadow: none;
-  border-radius: 5px;
+  border: {
+    radius: 5px;
+  }
 }
+//change button colour when mouse hovers over it
 #submitorder:hover {
   background-color: $primary-color;
   color: white;
   border-color: $primary-color;
 }
 
+//only display the arrow on screens above 706 pixels
 @media screen and (min-width: 706px) {
   /*arrow on selected option*/
   #arrow-down {
@@ -152,15 +166,28 @@ h1 {
     padding: {
       left: 0;
     }
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid $primary-color;
+    border: {
+      left: 10px solid transparent;
+      right: 10px solid transparent;
+      top: 10px solid $primary-color;
+    }
   }
 }
+
+//table customisation on the website
 table {
-  font-family: $primary-font;
-  border-collapse: collapse;
-  margin-top: 20px;
+  font: {
+    family: $primary-font;
+  }
+  border: {
+    collapse: collapse;
+  }
+  margin: {
+    top: 20px;
+  }
+  padding: {
+    bottom: 20px;
+  };
 }
 
 td, th {
@@ -168,23 +195,32 @@ td, th {
   text-align: left;
   padding: 20px;
 }
-table {
- padding-bottom: 20px;
+td > span:nth-child(1) {
+  color: black;
 }
 th {
-  background-color: $primary-color;
+  background: {
+    color: $primary-color;
+  }
   color: white;
 }
+//end of table customisation
+
+//adding margin to the radio buttons in the payment method form
 .cardmethods {
   margin: {
     right: 10px;
     top: 30px;
   }
 }
+
+//styling for all the inputfields on the website
 .inputfields {
   padding: 10px;
-  border-width: 2px;
-  border-radius: 5px;
+  border: {
+    width: 2px;
+    radius: 5px;
+  }
   box-shadow: none;
   margin: {
     right: 10px;
@@ -192,76 +228,111 @@ th {
     top: 5px
   }
 }
+
+//the width of all the textfields where users can type in
 .textbox {
   width: 200px;
 }
-.paymentaddress {
 
-  margin-bottom: 20px;
-}
+//styling for the back to cart link at the top of the header bar
 #backtocart {
-  margin-top: 30px;
+  margin: {
+    top: 30px;
+  }
   color: $primary-color;
-  font-weight: bold;
+  font: {
+    weight: bold;
+  }
   float: right;
 }
+
+//the width of the payment form table
 #paymentform {
   width: 600px;
 }
+//setting margin for all the radio buttons
 .radiobuttons {
   margin: {
     right: 10px;
     top: 10px;
   }
 }
+
+//the styling for all the form buttons apart from the submit button
 .formbuttons {
-  font-weight: bold;
+  font: {
+    weight: bold;
+    size: $primary-fontsize;
+    family: $primary-font;
+  }
   text-align: center;
-  font-size: $primary-fontsize;
-  font-family: $primary-font;
-  background-color: transparent;
+  background: {
+    color: transparent;
+  }
   width: 100px;
   border: $primary-color solid 2px;
+  border: {
+    radius: 5px;
+  }
   margin: {
     top: 5px;
   }
   padding: 10px;
   box-shadow: none;
-  border-radius: 5px;
   color: $primary-color;
 }
+//changing the colours when the buttons get hovered over
 .formbuttons:hover {
   background-color: $primary-color;
   color: white;
 }
 
+//float all the prices in the order summary to the right
 .price {
   float: right;
 }
-td > span:nth-child(1) {
-  color: black;
-}
-#requiredfieldtext {
-  font-size: $primary-fontsize;
+
+//setting the font and floating the requiredtext right
+.requiredfieldtext {
+  font: {
+    size: $primary-fontsize;
+    family: $primary-font;
+  }
   float: right;
-  font-family: $primary-font;
 }
+//giving the creditcard form margin at the top of the form
 #creditcardform {
-  margin-top: 70px;
+  margin: {
+    top: 70px;
+  }
 }
+
+//stying for all dropdowns on the website
 .dropdown {
   border: 0;
-  border-radius: 5px;
+  border: {
+    radius: 5px;
+  }
   box-shadow: none;
   width: 230px;
   height: 30px;
-  margin-bottom: 10px;
-  font-size: 10px;
-  background-color: $primary-color;
+  margin: {
+    bottom: 10px;
+  }
+  font: {
+    size: 10px;
+  }
+  background: {
+    color: $primary-color;
+  }
 }
+
+//displays a hand cursor when users hover over it
 .cursorhand {
   cursor: pointer;
 }
+
+//make all the following invisible at the start up of the website
 #creditcardform {
   display: none;
 }
@@ -283,10 +354,17 @@ td > span:nth-child(1) {
 #enteraddressmanually {
   display: none;
 }
+//end of invisible content
+
+//floating and adding margin to the creditcardtypes image
 #creditcardtypes {
-  margin-bottom: 10px;
+  margin: {
+    bottom: 10px;
+  }
   float: right;
 }
+
+//the payment radio buttons (creditcard, paypal, alipay) styling
 .paymentbuttons {
   font-weight: bold;
   text-align: center;
@@ -304,97 +382,159 @@ td > span:nth-child(1) {
   border-radius: 5px;
   color: white;
 }
+
+//the payment radio buttons on hover
 .paymentbuttons:hover {
-  background-color: $primary-color;
+  background: {
+    color: $primary-color;
+  }
   color: white;
-  border-color: $primary-color;
+  border: {
+    color: $primary-color;
+  }
 }
+
+
 @media screen and (max-width: 705px) {
+  //set all classes with large-* to width 100% on devices up to 705 pixels
   [class*="large-"] {
     width: 100%;
   }
+  //move required text and creditcardtype image to the left
   #requiredfieldtext {
     float: left;
   }
   #creditcardtypes {
     float: left;
   }
+  //make the order stage list in a downwards order
   li {
     display: block;
   }
+  //make header bar black
   #navbar {
-    background-color: black;
+    background: {
+      color: black;
+    }
   }
+  //make the amazing in lookamazing slighter darker
   #logo {
     color: #d2d2d2;
   }
+  //display all elements as invisible under 705 pixels
   .small-hidden {
     display: none;
   }
+
+  //change the payment radio buttons to black
   .paymentbuttons {
-    background-color: black;
-    border-color: black ;
+    background: {
+      color: black;
+    }
+    border: {
+      color: black ;
+    }
   }
+  //add some margint to the back to cart link
   #backtocart {
-    margin-top: 10px;
+    margin: {
+      top: 10px;
+    }
   }
+
+  //float the submit button to the middle
   #submitorder {
     float: none;
   }
+  //change the table colour to grey
   th {
-    background-color: #aaaaaa;
-    border-color: #aaaaaa;
+    background: {
+      color: #aaaaaa;
+    }
+    border: {
+      color: #aaaaaa;
+    }
   }
   td, th {
-    border-color: #aaaaaa;
+    border: {
+      color: #aaaaaa;
+    }
   }
 }
+
+//
 @media screen and (max-width:915px)  {
+  //make the inputfields with a width of 5 change to a width of 12 under 915 pixels
   .large-5 {
     width: 100%;
   }
 }
+//move the green arrow along so it is always on top of the right part in the order stage list then evetually disappear
 @media screen and (max-width:925px)  {
   #arrow-down {
-    margin-left: 490px;
+    margin: {
+      left: 490px;
+    }
   }
 }
 @media screen and (max-width:881px)  {
   #arrow-down {
-    margin-left: 460px;
+    margin: {
+      left: 460px;
+    }
   }
 }
 @media screen and (max-width:825px)  {
   #arrow-down {
-    margin-left: 440px;
+    margin: {
+      left: 440px;
+    }
   }
 }
 @media screen and (max-width:770px)  {
   #arrow-down {
-    margin-left: 415px;
+    margin: {
+      left: 415px;
+    }
   }
 }
 @media screen and (max-width:741px)  {
   #arrow-down {
-    margin-left: 400px;
+    margin: {
+      left: 400px;
+    }
   }
 }
+
+//center the delivery address
 #deliveryaddress {
   text-align: center;
 }
+
+//the message if paypal or alipay is choosen
 .alternativepayment {
-  font-size: 15px;
   text-align: center;
   border: 2px solid #e7b522;
   color: #e7b522;
-  font-weight: bold;
+  font: {
+    weight: bold;
+    size: 15px;
+  }
 }
+
+//footer styling
 #footertext {
-  font-size: 12px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  font: {
+    size: 12px;
+  }
+  padding: {
+    top: 20px;
+    bottom: 20px;
+  }
   color: white;
-  background-color: black;
+  background: {
+    color: black;
+  }
 }
 #footertext > .wrapper > a {
   color: white;
@@ -406,10 +546,17 @@ td > span:nth-child(1) {
 footer > .wrapper > a > img {
   padding: 7px 10px 2px 13px;
 }
+//end of footer styling
+
+//color and font size of the order total text
 #ordertotal {
-  font-size: 20px;
+  font: {
+    size: 20px;
+  }
   color: black;
 }
+
+//make the saved button invisible until clicked
 #saved {
   display: none;
   margin: 5px;

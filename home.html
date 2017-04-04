@@ -15,97 +15,108 @@
 <!--start of header tag-->
 <header>
     <!--Header bar-->
-    <div id="navbar">
-        <div class="wrapper">
+    <section id="navbar">
+        <article class="wrapper">
             <div id="logo" class="column large-1">
                 <span id="logoamazing">Look</span>Amazing
             </div>
             <div class="column large-1" id="backtocart">
                Back to Cart
             </div>
-        </div>
-    </div>
+        </article>
+    </section>
 </header>
-<section class="wrapper">
-    <hr class="small-hidden">
-</section>
-<div class="wrapper">
-    <div class="column" id="arrow-down">
+<main>
+    <!--Line under the header bar-->
+    <section class="wrapper">
+        <hr class="small-hidden">
+    </section>
 
-    </div>
-</div>
-<div class="wrapper">
-    <div class="column large-12">
-        <ul>
-            <li>Delivery Address</li>
-            <li>Delivery Option</li>
-            <li id="selected">Payment Method</li>
-            <li>Order Complete</li>
-        </ul>
-    </div>
-</div>
-<div class="wrapper">
-    <div class="column large-12">
-        <h1>Payment Method</h1>
-    </div>
-</div>
-<!--Payment information-->
-<div class="wrapper">
-    <table class="column large-8">
-        <tr>
-            <th>PAYMENT METHOD</th>
-        </tr>
-        <tr>
-            <td><form name="paymentform">
+    <!--arrow above the stage list to show the user what stage they're at-->
+    <section class="wrapper">
+        <section class="column" id="arrow-down">
+        </section>
+    </section>
+
+    <!--Stage list-->
+    <section class="wrapper">
+        <article class="column large-12">
+            <ul>
+                <li>Delivery Address</li>
+                <li>Delivery Option</li>
+                <li id="selected">Payment Method</li>
+                <li>Order Complete</li>
+            </ul>
+        </article>
+    </section>
+
+    <!--Title of what stage the user is at-->
+    <section class="wrapper">
+        <article class="column large-12">
+            <h1>Payment Method</h1>
+        </article>
+    </section>
+    <!--Payment information-->
+    <section class="wrapper">
+        <!--table of the payment methods-->
+        <table class="column large-8">
+            <tr>
+                <th>PAYMENT METHOD</th>
+            </tr>
+            <tr>
+                <td><form name="paymentform">
                 <!--creditcard payment form-->
-                <img  id="creditcardtypes" src="images/credit-card-icons-o4a.gif" width="250px" height="30px"><br><br><br>
-                <div id="requiredfieldtext"> * Indicates required field</div><br><br><br>
-                <div class="column large-12">
-                    <label class=" cursorhand paymentbuttons" >Credit Card
-                <input id="creditcard" class="cursorhand" style="margin-right: 10px;" type="radio" name="payment" value="creditcard">
-                </label>
-                </div>
-                    <div id="creditcardform">
-                    <label class="column large-5 inputfields">Card Number *<br>
-                    <input class="cursorhand inputfields textbox" type="text" name="cardnumber"><br>
-                    </label>
-                    <label class="column large-5 inputfields">Name on the Card *<br>
-                    <input class="cursorhand inputfields textbox" type="text" name="nameoncard"><br>
-                    </label>
-                    <label class="column large-5 inputfields">Expiry Date *<br>
-                        <input class="cursorhand inputfields textbox" type="text" name="expirydate"><br>
-                    </label>
-                    <label class="column large-5 inputfields">CV2 *<br>
-                        <input class="cursorhand inputfields" type="text" name="cv2"><br>
-                    </label>
-                    </div>
+                    <img  id="creditcardtypes" alt="CreditCardTypes" src="images/credit-card-icons-o4a.gif" width="250px" height="30px"><br><br><br>
+                    <div class="requiredfieldtext"> * Indicates required field</div><br><br><br>
+
+                    <!--Credit card radio button-->
+                    <section class="column large-12">
+                        <label class=" cursorhand paymentbuttons" >Credit Card
+                            <input id="creditcard" class="cursorhand" style="margin-right: 10px;" type="radio" name="payment" value="creditcard">
+                        </label>
+                    </section>
+                    <!--CreditCard payment form-->
+                    <article id="creditcardform">
+                        <label class="column large-5 inputfields">Card Number *<br>
+                            <input class="cursorhand inputfields textbox" type="text" name="cardnumber"><br>
+                        </label>
+                        <label class="column large-5 inputfields">Name on the Card *<br>
+                            <input class="cursorhand inputfields textbox" type="text" name="nameoncard"><br>
+                        </label>
+                        <label class="column large-5 inputfields">Expiry Date *<br>
+                            <input class="cursorhand inputfields textbox" type="text" name="expirydate"><br>
+                        </label>
+                        <label class="column large-5 inputfields">CV2 *<br>
+                            <input class="cursorhand inputfields" type="text" name="cv2"><br>
+                        </label>
+                    </article>
                     <!--paypal payment form-->
-                <div class="column large-12">
-                    <label class="paymentbuttons cursorhand">PayPal
-                    <input class="cardmethods cursorhand" id="paypal" type="radio" name="payment" value="paypal">
-                    </label>
-                </div>
-                    <div id="paypalform">
+                    <section class="column large-12">
+                        <label class="paymentbuttons cursorhand">PayPal
+                            <input class="cardmethods cursorhand" id="paypal" type="radio" name="payment" value="paypal">
+                        </label>
+                    </section>
+                    <section id="paypalform">
                         <section class="column large-12 inputfields">
                             <p class="inputfields alternativepayment ">You have choosen to pay with PayPal! you will asked to sign into Paypal once you submit your order to complete your payment</p>
                         </section>
-                    </div>
+                    </section>
                     <!--Alipay payment form-->
-                <div class="column large-12">
-                    <label class="paymentbuttons cursorhand">AliPay
-                    <input class="cursorhand cardmethods" id="alipay" type="radio" name="payment" value="alipay">
-                    </label>
-                </div>
-                    <div id="alipayform">
+                    <article class="column large-12">
+                        <label class="paymentbuttons cursorhand">AliPay
+                            <input class="cursorhand cardmethods" id="alipay" type="radio" name="payment" value="alipay">
+                        </label>
+                    </article>
+                    <article id="alipayform">
                         <section class="column large-12 inputfields">
                             <p class="inputfields alternativepayment ">You have choosen to pay with AliPay! you will asked to sign into AliPay once you submit your order to complete your payment</p>
                         </section>
-                    </div>
+                    </article>
                 </form>
                 </td>
             </tr>
         </table>
-    <!--Order summary-->
+    <!--Order summary table-->
         <table class="column large-4">
             <tr>
                 <th>ORDER SUMMARY</th>
@@ -115,93 +126,114 @@
                     Items (1) <span class="price"><strong style="color: black;">£70.99</strong></span><br>
                     Delivery <span class="price">£0.00</span><br>
                     Promotions <span class="price">-£0.00</span><br><br>
-                Promotions Applied <br><br>
-                FREE next day delivery for UK customers when you buy me today<br>
-                <hr><br><span id="ordertotal">
-                Order Total:<br>
-                £70.99</span></td>
+                    Promotions Applied <br><br>
+                    FREE next day delivery for UK customers when you buy me today<br>
+                    <hr><br><span id="ordertotal">
+                    Order Total:<br>
+                    £70.99</span>
+                </td>
             </tr>
         </table>
-    <!--Delivery Address-->
-    <table class="column large-4">
-        <tr>
-            <th>DELIVERY ADDRESS</th>
-        </tr>
-        <tr>
-            <td id="deliveryaddress">
-                <label class="column large-12"><input id="noaddress" class="radiobuttons" type="radio" name="cardholderaddress" value="sameaddress" checked="checked">Use my delivery address as my cardholder address<br></label>
-                <label class=" column large-12"><input id="enteraddress" class="radiobuttons" type="radio" name="cardholderaddress" value="differentaddress">Use a different address<br><br>
-                </label>
-                <div id="findpostcode">
-                    <form name="postcode">
-                    <label class="column large-12 inputfields">Country *<br>
-                        <select  class="textbox cursorhand inputfields dropdown">
-                            <option value="UK">United Kingdom</option>
-                            <option value="USA">United States</option>
-                            <option value="Germany">Germany</option>
-                        </select><br><br>
+        <!--Delivery Address-->
+        <table class="column large-4">
+            <tr>
+                <th>DELIVERY ADDRESS</th>
+            </tr>
+            <tr>
+                <td id="deliveryaddress">
+                    <div class="requiredfieldtext"> * Indicates required field</div><br><br><br>
+                <!--enter address or use same address radio buttons-->
+                    <label class="column large-12">
+                        <input id="noaddress" class="radiobuttons" type="radio" name="cardholderaddress" value="sameaddress" checked="checked">Use my delivery address as my cardholder address<br></label>
+                    <label class=" column large-12">
+                        <input id="enteraddress" class="radiobuttons" type="radio" name="cardholderaddress" value="differentaddress">Use a different address<br><br>
                     </label>
+                <!--pick a country -->
+                    <article id="findpostcode">
+                        <form name="postcode">
+                            <label class="column large-12 inputfields">Country *<br>
+                                <select  class="textbox cursorhand inputfields dropdown">
+                                    <option value="UK">United Kingdom</option>
+                                    <option value="USA">United States</option>
+                                    <option value="Germany">Germany</option>
+                                    <option value="China">China/option>
+                                </select><br><br>
+                            </label>
 
-                    <label class="column large-12 inputfields">Post Code/Zip *<br>
-                        <input class="textbox inputfields" id="smallinput" type="text" name="postcode"  placeholder="" required="" ><br>
-                    </label>
-                    </form>
-                    <div class="column large-12">
-                        <button id="addressbutton" class="formbuttons cursorhand inputfields">Find Address</button>
-                    </div>
-                    <div id="appendFindAddress">
-                        <label class="column  large-12 inputfields">
-                            <select id="dropdownselect" class="dropdown">
-                                <option value="42TG">42 Town Green</option>
-                                <option value="44TG">44 Town Green</option>
-                                <option value="46TG">46 Town Green</option>
-                                <option value="48TG">48 Town Green</option>
-                            </select>
-                        </label>
-                    </div>
-                </div>
+                        <!--find your postcode form-->
+                            <label class="column large-12 inputfields">Post Code/Zip *<br>
+                                <input class="textbox inputfields" id="smallinput" type="text" name="postcode"  placeholder="" required="" ><br>
+                            </label>
+                        </form>
+                        <section class="column large-12">
+                            <button id="addressbutton" class="formbuttons cursorhand inputfields">Find Address</button>
+                        </section>
 
+                    <!--downdrop of addressed-->
+                        <section id="appendFindAddress">
+                            <label class="column  large-12 inputfields">
+                                <select id="dropdownselect" class="dropdown">
+                                    <option value="42TG">42 Town Green</option>
+                                    <option value="44TG">44 Town Green</option>
+                                    <option value="46TG">46 Town Green</option>
+                                    <option value="48TG">48 Town Green</option>
+                                </select>
+                            </label>
+                        </section>
+                </article>
+
+                <!--Enter address manually button-->
                 <u id="enteraddressmanually" class="column large-12 cursorhand inputfields">Or enter address manually</u><br>
-                <div id="appendEnterAddress">
+
+                <!--Enter a new address form-->
+                <article id="appendEnterAddress">
                     <form name="address">
-                    <label class="column large-12 inputfields">Company Name<br>
-                        <input class="cursorhand textbox inputfields" type="text" name="companyname"  placeholder="" ><br>
-                    </label>
-                    <label class="column large-12 inputfields">House Number/Name *<br>
-                        <input class="cursorhand inputfields textbox" type="text" name="housenumber"  placeholder="" required="" ><br>
-                    </label>
-                    <label class="column large-12 inputfields">Address 1 *<br>
-                        <input class="cursorhand inputfields textbox" type="text" name="addressone"  placeholder="" required="" ><br>
-                    </label>
-                    <label class="column large-12 inputfields">Address 2<br>
-                        <input class="cursorhand inputfields textbox" type="text" name="addresstwo"  placeholder="" ><br>
-                    </label>
-                    <label class="column large-12 inputfields">Town/City *<br>
-                        <input class="cursorhand inputfields textbox" type="text" name="TownCity"  placeholder="" required="" ><br>
-                    </label>
-                    <label class="column large-12 inputfields ">Country<br>
-                        <input class="cursorhand inputfields textbox" type="text" name="country"  placeholder="" >
-                    </label>
+                        <label class="column large-12 inputfields">Company Name<br>
+                            <input class="cursorhand textbox inputfields" type="text" name="companyname"  placeholder="" ><br>
+                        </label>
+                        <label class="column large-12 inputfields">House Number/Name *<br>
+                            <input class="cursorhand inputfields textbox" type="text" name="housenumber"  placeholder="" required="" ><br>
+                        </label>
+                        <label class="column large-12 inputfields">Address 1 *<br>
+                            <input class="cursorhand inputfields textbox" type="text" name="addressone"  placeholder="" required="" ><br>
+                        </label>
+                        <label class="column large-12 inputfields">Address 2<br>
+                            <input class="cursorhand inputfields textbox" type="text" name="addresstwo"  placeholder="" ><br>
+                        </label>
+                        <label class="column large-12 inputfields">Town/City *<br>
+                            <input class="cursorhand inputfields textbox" type="text" name="TownCity"  placeholder="" required="" ><br>
+                        </label>
+                        <label class="column large-12 inputfields ">Country<br>
+                            <input class="cursorhand inputfields textbox" type="text" name="country"  placeholder="" >
+                        </label>
                     </form>
-                    <button id="saveaddress" class="formbuttons cursorhand"><span id="save">Save</span><span id="saved">Saved <img src="images/checked.png"> </span></button>
-                </div>
-                <section id="address">
-                John Smith<br>
-                1 Bellfield<br>
-                Liverpool, Merseyside, CA1 2AC<br>
-                United Kingdom</section>
-            </td>
-        </tr>
-    </table>
 
+                    <!--Save address button-->
+                    <button id="saveaddress" class="formbuttons cursorhand"><span id="save">Save</span><span id="saved">Saved <img alt="tick" src="images/checked.png"> </span></button>
+                </article>
+                    <section id="address">
+                        John Smith<br>
+                        1 Bellfield<br>
+                        Liverpool, Merseyside, CA1 2AC<br>
+                       United Kingdom
+                    </section>
+                </td>
+            </tr>
+        </table>
+
+        <!--submit order button-->
         <button class="cursorhand" id="submitorder">Submit</button>
-        </div>
+    </section>
+</main>
 
+<!--Footer of the website-->
 <footer id="footertext">
-    <section class="wrapper"><img src="images/cascade.png" width="80px" height="50px"></section>
+    <section class="wrapper"><img alt="UCC Certificate" src="images/cascade.png" width="80px" height="50px"></section>
     <section class="wrapper">LookAmazing Ltd</section>
     <section class="wrapper">21 GreenWood Lane, Greenwood Park, GreenLand, ABC 123</section>
 </footer>
+
+<!--script tags for the website-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="main.js"></script>
 </body>
